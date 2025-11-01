@@ -1,7 +1,7 @@
 function apiApp() {
   return {
-    title: "Studio Ghibli",
-    tagline: "Movies",
+    title: "Studio Ghibli Movies",
+    //tagline: "Movies",
     async loadData() {
       const out = document.getElementById("output");
       out.innerHTML = "<p>Loading your data...</p>";
