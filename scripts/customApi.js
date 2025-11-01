@@ -6,10 +6,14 @@ function apiApp() {
       const out = document.getElementById("output");
       out.innerHTML = "<p>Loading your data...</p>";
       try {
+        const Url = "https://ghibliapi.vercel.app/films";
+        const res = await axios.get(Url)
         // STEP 1: Pick API from README
         // STEP 2: Add endpoint below
         // STEP 3: console.log(res.data)
         // STEP 4: this.render(items)
+        this.render(res.data.message);
+        
       } catch (err) {
         out.innerHTML = `<p class='text-red-600'>Could not load data 😢</p>`;
         console.error(err);
