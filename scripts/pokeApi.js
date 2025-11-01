@@ -8,7 +8,7 @@ function apiApp() {
       try {
         // STEP 1: Visit https://pokeapi.co/api/v2/pokemon?limit=3
         // STEP 2: Add endpoint
-        const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=3");
+        const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=300");
         // STEP 3: Identify res.data.results
         const details = await Promise.all(res.data.results)
         this.render(details);
